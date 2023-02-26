@@ -1,0 +1,77 @@
+TASK #0
+
+let arr = [9, 3, 7, 4, 1, 2];                     || O(1)                      || O(1) 
+alert(arr);
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr.length - i; j++) {      || O(n+(n-1)+(n-2)+...+2+1)  || O(n + n^2/2)  
+    if (arr[j] > arr[j + 1]) {                    |
+      let t = arr[j];                             | 
+      arr[j] = arr[j + 1];                        |
+      arr[j + 1] = t;                             || O(1)                       || O(1)
+    }
+  }
+}
+alert(arr);
+
+Временная сложность: O(1) + O(n + n^2/2)  * O(1) = O(n^2) 
+
+
+TASK #1
+
+START
+READ number n
+IF n == 1 THEN return         ||  O(1) 
+FOR i = 1, i <= n, i + 1      ||  O(n) 
+  FOR j = 1; j <= n, j + 1    ||  O(n) 
+    print "*"                 ||  O(1)
+BREAK
+END
+
+Временная сложность:  O(1) + O(n) * O(n) * O(1) = O(n^2) 
+
+TASK #2
+
+START
+READ number n                  ||   O(1)
+numbers i = 0, j = 0, a = 0    ||   O(1)
+FOR i = n / 2, i <= n; i + 1   ||   O(n)
+  FOR j = 2, j <= n, j * 2     ||   O(log(n))
+    a = a + n / 2              ||   O(1)
+END
+
+1-ый цикл O(n)
+2-ый цикл O(log(n))
+Счетчик вложенного цикла будет принимать значения:
+1,2,4,8,16,...2^k
+При этом k=log(n)
+
+Временная сложность: O(1) + O(1) + O(n * log(n)) * O(1) = O(n * log(n)) 
+
+
+TASK #3
+
+START
+READ number n                  |
+number a = 0                   || O(1)
+FOR i = 0, i < n, i + 1        |
+  FOR j = n, j > i, j - 1      || O(n+(n-1)+(n-2)+...+2+1)  || O(n + n^2/2) 
+    a = a + i + j              || O(1)
+END
+
+Временная сложность: O(1) + O(n + n^2/2) * O(1) = O(n^2) 
+
+TASK #4
+
+START
+READ number n           |
+numbers a = 0, i = n    ||  O(1)
+WHILE i > 0             ||  O(log(n))
+    a = a + i           |
+    i = i / 2           ||  O(1)
+END
+
+Счетчик цикла будет принимать значения:
+...8,4,2,1 -  2^k
+При этом k=log(n)
+
+Временная сложность: O(1) + O(log(n)) * O(1) = O(log(n))
