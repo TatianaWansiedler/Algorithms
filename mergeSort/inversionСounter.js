@@ -28,7 +28,7 @@ function inversionCounter(arr, count = 0) {
     }
     return count
 }
-console.log(bubbleSort(arr));
-console.log(bubbleSort(arr1));
-console.log(bubbleSort(arr2));
-console.log(bubbleSort(arr3));
+console.log(inversionCounter(arr));
+console.log(inversionCounter(arr1));
+console.log(inversionCounter(arr2));
+console.log(inversionCounter(arr3));
