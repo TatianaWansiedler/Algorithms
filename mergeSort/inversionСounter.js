@@ -12,14 +12,12 @@
 // Объяснение: Данный массив имеет две инверсии: 
 // (3, 1), (3, 2)
 
-// в случае если сортировка выполняется с помощью bubbleSort
-
 const arr = [8, 4, 2, 1]
 const arr1 = [3, 1, 2]
 const arr2 = [1, 2, 3, 4, 5]
 const arr3 = [5, 2, 7, 4, 8, 9]
 
-function bubbleSort(arr, count = 0) {
+function inversionCounter(arr, count = 0) {
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
