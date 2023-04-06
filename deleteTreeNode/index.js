@@ -13,19 +13,16 @@ class BinaryTree {
   }
 
   remove(value) {
-    this.flag = false
     this.root = this._removeNode(this.root, value);
-    return this.flag
   }
 
   _removeNode(node, value) {
-    if (!node) { 
+    if (!node) {
       return null;
     }
 
-    if (node.value === value) { 
-      this.flag = true
-      node = null; 
+    if (node.value === value) {
+      node = null;
     } else {
       node.left = this._removeNode(node.left, value);
       node.right = this._removeNode(node.right, value);
